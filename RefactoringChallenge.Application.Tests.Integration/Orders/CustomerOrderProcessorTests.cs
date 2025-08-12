@@ -1,6 +1,6 @@
 using Microsoft.Data.SqlClient;
 using RefactoringChallenge.Application.Orders;
-using RefactoringChallenge.Domain.Entities;
+using RefactoringChallenge.Domain.Orders;
 using Shouldly;
 
 namespace RefactoringChallenge.WebApi.Tests.Integration.Orders;

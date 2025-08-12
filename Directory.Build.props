@@ -1,0 +1,15 @@
+<Project>
+  
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-RefactoringChallenge-07a7df1a-56fd-411f-8eea-e82d9e452dd2</UserSecretsId>
+    
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+  
+</Project>

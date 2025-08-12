@@ -1,4 +1,11 @@
-var builder = Host.CreateApplicationBuilder(args);
+using RefactoringChallenge.Infrastructure;
 
-var host = builder.Build();
-host.Run();
+HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
+
+builder.Services.AddControllers();
+
+builder.Services.AddInfrastructure(builder.Configuration);
+
+IHost host = builder.Build();
+
+await host.RunAsync();

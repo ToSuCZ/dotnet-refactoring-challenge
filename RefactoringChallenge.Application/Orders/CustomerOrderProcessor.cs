@@ -1,5 +1,8 @@
 using Microsoft.Data.SqlClient;
-using RefactoringChallenge.Domain.Entities;
+using RefactoringChallenge.Domain.Customers;
+using RefactoringChallenge.Domain.OrderItems;
+using RefactoringChallenge.Domain.Orders;
+using RefactoringChallenge.Domain.Products;
 
 namespace RefactoringChallenge.Application.Orders;
 
@@ -23,7 +26,7 @@ public class CustomerOrderProcessor
         {
             connection.Open();
 
-            Customer customer = null;
+            Customer? customer = null;
             using (var command = new SqlCommand("SELECT Id, Name, Email, IsVip, RegistrationDate FROM Customers WHERE Id = @CustomerId", connection))
             {
                 command.Parameters.AddWithValue("@CustomerId", customerId);
@@ -45,7 +48,7 @@ public class CustomerOrderProcessor
             }
             
             if (customer == null)
-                throw new Exception($"Zákazník s ID {customerId} nebyl nalezen.");
+                throw new KeyNotFoundException($"Zákazník s ID {customerId} nebyl nalezen.");
 
             var pendingOrders = new List<Order>();
             using (var command = new SqlCommand("SELECT Id, CustomerId, OrderDate, TotalAmount, Status FROM Orders WHERE CustomerId = @CustomerId AND Status = 'Pending'", connection))
