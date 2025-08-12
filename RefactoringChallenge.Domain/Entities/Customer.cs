@@ -1,4 +1,4 @@
-namespace RefactoringChallenge.Entities;
+namespace RefactoringChallenge.Domain.Entities;
 
 public class Customer
 {

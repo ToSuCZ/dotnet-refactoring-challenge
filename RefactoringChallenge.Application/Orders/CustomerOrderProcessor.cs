@@ -1,7 +1,7 @@
-using System.Data.SqlClient;
-using RefactoringChallenge.Entities;
+using Microsoft.Data.SqlClient;
+using RefactoringChallenge.Domain.Entities;
 
-namespace RefactoringChallenge.Services;
+namespace RefactoringChallenge.Application.Orders;
 
 public class CustomerOrderProcessor
 {
