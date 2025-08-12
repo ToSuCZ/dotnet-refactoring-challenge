@@ -1,4 +1,4 @@
-namespace RefactoringChallenge;
+namespace RefactoringChallenge.Entities;
 
 public class Product
 {

@@ -1,7 +1,8 @@
-namespace RefactoringChallenge;
-
 using System.Data.SqlClient;
 using NUnit.Framework;
+using RefactoringChallenge.Services;
+
+namespace RefactoringChallenge.Tests;
 
 [TestFixture]
 public class CustomerOrderProcessorTests

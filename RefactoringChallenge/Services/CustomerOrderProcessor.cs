@@ -1,8 +1,7 @@
-namespace RefactoringChallenge;
-
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
+using RefactoringChallenge.Entities;
+
+namespace RefactoringChallenge.Services;
 
 public class CustomerOrderProcessor
 {
