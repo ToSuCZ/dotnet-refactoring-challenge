@@ -41,7 +41,7 @@ public class CustomerOrderProcessor
                             Name = (string)reader["Name"],
                             Email = (string)reader["Email"],
                             IsVip = (bool)reader["IsVip"],
-                            RegistrationDate = (DateTime)reader["RegistrationDate"]
+                            CreatedAt = (DateTime)reader["CreatedAt"]
                         };
                     }
                 }
@@ -63,7 +63,7 @@ public class CustomerOrderProcessor
                         {
                             Id = (int)reader["Id"],
                             CustomerId = (int)reader["CustomerId"],
-                            OrderDate = (DateTime)reader["OrderDate"],
+                            CreatedAt = (DateTime)reader["CreatedAt"],
                             TotalAmount = (decimal)reader["TotalAmount"],
                             Status = (string)reader["Status"]
                         });
@@ -133,7 +133,7 @@ public class CustomerOrderProcessor
                     discountPercent += 10;
                 }
 
-                int yearsAsCustomer = DateTime.Now.Year - customer.RegistrationDate.Year;
+                int yearsAsCustomer = DateTime.Now.Year - customer.CreatedAt.Year;
                 if (yearsAsCustomer >= 5)
                 {
                     discountPercent += 5;

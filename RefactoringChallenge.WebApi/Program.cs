@@ -1,11 +1,13 @@
 using RefactoringChallenge.Infrastructure;
 
-HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
 builder.Services.AddInfrastructure(builder.Configuration);
 
-IHost host = builder.Build();
+WebApplication app = builder.Build();
 
-await host.RunAsync();
+app.MapControllers();
+
+await app.RunAsync();

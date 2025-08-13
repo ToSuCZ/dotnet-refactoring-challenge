@@ -7,7 +7,9 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddSqlServer<ApplicationDbContext>(configuration.GetConnectionString("DefaultConnection"));
+        services.AddSqlServer<ApplicationDbContext>(
+            configuration.GetConnectionString("DefaultConnection"),
+            sql => sql.MigrationsAssembly("RefactoringChallenge.Infrastructure.Migrations"));
 
         return services;
     }
