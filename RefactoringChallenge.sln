@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringChallenge.Infras
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringChallenge.Infrastructure.Migrations", "RefactoringChallenge.Infrastructure.Migrations\RefactoringChallenge.Infrastructure.Migrations.csproj", "{F11DC0C8-3DF8-45B5-9ECC-4C6D368EF4F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringChallenge.Domain.Tests.Unit", "RefactoringChallenge.Domain.Tests.Unit\RefactoringChallenge.Domain.Tests.Unit.csproj", "{630E07A8-541D-452B-9336-7E67FC1A7374}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,5 +52,9 @@ Global
 		{F11DC0C8-3DF8-45B5-9ECC-4C6D368EF4F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F11DC0C8-3DF8-45B5-9ECC-4C6D368EF4F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F11DC0C8-3DF8-45B5-9ECC-4C6D368EF4F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{630E07A8-541D-452B-9336-7E67FC1A7374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{630E07A8-541D-452B-9336-7E67FC1A7374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{630E07A8-541D-452B-9336-7E67FC1A7374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{630E07A8-541D-452B-9336-7E67FC1A7374}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
