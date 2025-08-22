@@ -13,4 +13,14 @@ public class OrderItem : EntityBase
     
     public Product Product { get; set; } = null!;
     public Order Order { get; set; } = null!;
+    
+    public void UpdateProductQuantity()
+    {
+        if (Product.StockQuantity < Quantity)
+        {
+            throw new InvalidOperationException("Insufficient stock for product.");
+        }
+        
+        Product.StockQuantity -= Quantity;
+    }
 }

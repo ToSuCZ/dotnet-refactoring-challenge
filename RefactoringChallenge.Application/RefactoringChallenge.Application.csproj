@@ -2,6 +2,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\RefactoringChallenge.Domain\RefactoringChallenge.Domain.csproj" />
+      <ProjectReference Include="..\RefactoringChallenge.Infrastructure\RefactoringChallenge.Infrastructure.csproj" />
     </ItemGroup>
 
     <ItemGroup>
