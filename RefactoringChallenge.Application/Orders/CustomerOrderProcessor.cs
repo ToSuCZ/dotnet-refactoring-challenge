@@ -15,10 +15,6 @@ public class CustomerOrderProcessor(
 {
     public async Task<List<Order>> ProcessCustomerOrdersAsync(int customerId, CancellationToken ct = default)
     {
-        if (customerId <= 0) {
-            throw new ArgumentException("ID zákazníka musí být kladné číslo.", nameof(customerId));
-        }
-
         Customer customer = await customerRepository.GetCustomerByIdAsync(customerId, ct)
                              ?? throw new KeyNotFoundException($"Zákazník s ID {customerId} nebyl nalezen.");
         
